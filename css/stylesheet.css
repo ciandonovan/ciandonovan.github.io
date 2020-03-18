@@ -1,0 +1,176 @@
+:root
+{
+	--dim-navbar-height: 50px;
+}
+
+html
+{
+	overflow-x:hidden;
+	font-family: 'Open Sans', sans-serif;
+	scroll-behavior: smooth;
+	scroll-snap-type: y mandatory;
+}
+
+body
+{
+	text-align: center !important;
+	color: #313131;
+	background: #eceff1;
+}
+
+:focus
+{
+    outline: none !important;
+}
+
+.container-fluid
+{
+    padding: 0;
+}
+
+/*------------------------------------------------------------*/
+
+.section-title
+{
+    position: relative;
+    z-index: 1;
+    top: 6vw;
+    width: 24vw;
+    height: 24vw;
+    background-color: #ffffff;
+    border: 2vw solid #ffd607;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0 8px 16px rgba(0,0,0,.1);
+}
+
+.section-title h1
+{
+    font-size: 3vw;
+    margin: 0;
+}
+
+.section-content
+{
+    margin-top: 6vw;
+    padding: 4vmin;
+}
+
+@media (max-width: 575.98px)
+{
+    .section-title
+    {
+        top: 12vw;
+        width: 48vw;
+        height: 48vw;
+        border: 4vw solid #ffd607;
+    }
+
+    .section-title h1
+    {
+        font-size: 6vw;
+    }
+
+    .section-content
+    {
+        margin-top: 12vw;
+    }
+}
+
+
+/*------------------------------------------------------------*/
+
+.navbar
+{
+	/*
+	height: var(--dim-navbar-height);
+	*/
+	background-color: #ffffff !important;
+	opacity: 90% !important;
+}
+/*
+.navbar-toggle
+{
+	height: var(--dim-navbar-height);
+}
+
+.navbar-toggler
+{
+	height: var(--dim-navbar-height);
+}
+*/
+
+.navbar-brand img
+{
+	max-height: var(--dim-navbar-height);
+	padding: 5px;
+}
+
+section
+{
+	height: 100vh;
+	width: 100vw;
+	scroll-snap-align: start;
+}
+
+/* Style the video: 100% width and height to cover the entire window */
+.splash_video
+{
+	width: 100vw;
+	height: 100vh;
+	object-fit: cover;
+	object-position: 50% 0;
+}
+/*
+.tab-pane
+{
+	margin: 0px;
+	padding: 0px !important;
+}
+*/
+
+/*------------------------------------------------------------*/
+
+#contact .section-content
+{
+    font-size: 1.2rem;
+}
+
+#contact .section-content h1
+{
+    font-family: 'Anton';
+    font-size: 2.5em;
+    color: #ffd607;
+    text-shadow: 0 0 2px rgba(0,0,0,0.6);
+}
+
+#contact .social-link
+{
+    font-size: 2.5em;
+    line-height: 1;
+    color: #414141;
+
+    -webkit-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+#contact .social-link:hover
+{
+    color: #ffd607;
+}
+
+/*------------------------------------------------------------*/
+
+#copyright
+{
+    color: #444444;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
