@@ -18,70 +18,11 @@ body
 	background: #eceff1;
 }
 
+
 :focus
 {
     outline: none !important;
 }
-
-.container-fluid
-{
-    padding: 0;
-}
-
-/*------------------------------------------------------------*/
-
-.section-title
-{
-    position: relative;
-    z-index: 1;
-    top: 6vw;
-    width: 24vw;
-    height: 24vw;
-    background-color: #ffffff;
-    border: 2vw solid #ffd607;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    box-shadow: 0 8px 16px rgba(0,0,0,.1);
-}
-
-.section-title h1
-{
-    font-size: 3vw;
-    margin: 0;
-}
-
-.section-content
-{
-    margin-top: 6vw;
-    padding: 4vmin;
-}
-
-@media (max-width: 575.98px)
-{
-    .section-title
-    {
-        top: 12vw;
-        width: 48vw;
-        height: 48vw;
-        border: 4vw solid #ffd607;
-    }
-
-    .section-title h1
-    {
-        font-size: 6vw;
-    }
-
-    .section-content
-    {
-        margin-top: 12vw;
-    }
-}
-
-
-/*------------------------------------------------------------*/
 
 .navbar
 {
@@ -91,17 +32,6 @@ body
 	background-color: #ffffff !important;
 	opacity: 90% !important;
 }
-/*
-.navbar-toggle
-{
-	height: var(--dim-navbar-height);
-}
-
-.navbar-toggler
-{
-	height: var(--dim-navbar-height);
-}
-*/
 
 .navbar-brand img
 {
@@ -109,10 +39,16 @@ body
 	padding: 5px;
 }
 
+.nav-pills .nav-link.active
+{
+	background-color: #0F88E3 !important;
+}
+
 section
 {
 	height: 100vh;
 	width: 100vw;
+	position: relative;
 	scroll-snap-align: start;
 }
 
@@ -124,27 +60,17 @@ section
 	object-fit: cover;
 	object-position: 50% 0;
 }
-/*
-.tab-pane
-{
-	margin: 0px;
-	padding: 0px !important;
-}
-*/
 
 /*------------------------------------------------------------*/
 
-#contact .section-content
+#contact
 {
     font-size: 1.2rem;
 }
 
-#contact .section-content h1
+#contact .col
 {
-    font-family: 'Anton';
-    font-size: 2.5em;
-    color: #ffd607;
-    text-shadow: 0 0 2px rgba(0,0,0,0.6);
+	top: 50vh !important;
 }
 
 #contact .social-link
@@ -173,4 +99,8 @@ section
     font-size: 16px;
     padding-top: 10px;
     padding-bottom: 5px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
 }
