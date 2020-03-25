@@ -41,7 +41,7 @@ body
 
 .nav-pills .nav-link.active
 {
-	background-color: #0F88E3 !important;
+	background-color: #0f88e3 !important;
 }
 
 section
@@ -68,9 +68,15 @@ section
     font-size: 1.2rem;
 }
 
+#contact h1
+{
+	color: #0f88e3;
+	font-weight: bold;
+}
+
 #contact .col
 {
-	top: 50vh !important;
+	top: 40vh !important;
 }
 
 #contact .social-link
