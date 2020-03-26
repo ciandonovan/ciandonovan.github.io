@@ -1,54 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html itemscope lang="en">
 
 	<head>
 
 		<title>Akara Robotics</title>
 
-		<meta charset="utf-8">
+		<meta charset="utf-8"/>
 
-		<meta name="twitter:title" content="Akara Robotics">
-		<meta property="og:title" content="Akara Robotics">
+		<meta name="twitter:title" content="Akara Robotics"/>
+		<meta property="og:title" content="Akara Robotics"/>
 
-		<meta name="keywords" content="stevie the robot,social assistive robot,retirement communities,ireland,time cover, coronavirus, covid19, akara, robotics">
-		<meta name="news_keywords" content="coronavirus, covid19, akara, robotics, UV, violet">
+		<meta name="keywords" content="stevie the robot,social assistive robot,retirement communities,ireland,time cover, coronavirus, covid19, akara, robotics"/>
+		<meta name="news_keywords" content="coronavirus, covid19, akara, robotics, UV, violet"/>
 
 		<!--TODO: write description-->
-		<meta name="description" content="">
-		<meta name="twitter:description" content="">
-		<meta property="og:description" content="">
-		<meta itemprop="description" content="">
+		<meta name="description" content=""/>
+		<meta name="twitter:description" content=""/>
+		<meta property="og:description" content=""/>
+		<meta itemprop="description" content=""/>
 
 		<!--TODO: change social card-->
-		<meta name="twitter:image" content="https://stevietherobot.com/imgs/social_card.png">
-		<meta property="og:image" content="https://stevietherobot.com/imgs/social_card.png">
-		<meta itemprop="image" content="https://stevietherobot.com/imgs/social_card.png">
+		<meta name="twitter:image" content="https://stevietherobot.com/imgs/social_card.png"/>
+		<meta property="og:image" content="https://stevietherobot.com/imgs/social_card.png"/>
+		<meta itemprop="image" content="https://stevietherobot.com/imgs/social_card.png"/>
 
-		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:site" content="@akara_robotics">
-		<meta name="twitter:domain" content="akara.ai">
+		<meta name="twitter:card" content="summary_large_image"/>
+		<meta name="twitter:site" content="@akara_robotics"/>
+		<meta name="twitter:domain" content="akara.ai"/>
 
-		<meta property="og:url" content="https://www.akara.ai/" />
-		<meta property="og:type" content="Website">
-		<meta property="og:site_name" content="Akara Robotics">
-		<meta itemprop="name" content="Akara">
+		<meta property="og:url" content="https://www.akara.ai/"/>
+		<meta property="og:type" content="Website"/>
+		<meta property="og:site_name" content="Akara Robotics"/>
+		<meta itemprop="name" content="Akara"/>
 
 		<link rel="icon" type="image/png" href="res/img/favicon.png"/>
 
-		<base href="/">
-		<link rel="canonical" href="https://www.akara.ai/" />
-		<meta name="author" content="Cian Donovan"> 
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no">
+		<base href="/"/>
+		<link rel="canonical" href="https://www.akara.ai/"/>
+		<meta name="author" content="Cian Donovan"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
 
 		<!--Stylesheets-->
 		<link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
 		<!--Fonts-->
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"/>
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet"/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 		
 		<!--MaxCDN Bootstrap-->
@@ -57,18 +57,21 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
 		<!-- Animate on Scroll -->
-		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160704918-1"></script>
 		<script>
 			window.dataLayer = window.dataLayer || [];
-			window['ga-disable-UA-160704918-1'] = true;
+			/*window['ga-disable-UA-160704918-1'] = true;*/
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
 
-			gtag('config', 'UA-160704918-1');
+			gtag('config', 'UA-160704918-1',
+			{
+				cookie_expires: 0
+			});
 		</script>
 
 	</head>
@@ -79,7 +82,7 @@
 
 			<!-- Brand -->
 			<a class="navbar-brand" href="https://www.akara.ai/">
-				<img class="img-fluid"src="res/img/akara-full-transparent-text-logo.png" alt="Logo">
+				<img class="img-fluid" src="res/img/akara-full-transparent-text-logo.png" alt="Logo">
 			</a>
 
 			<!-- Toggler/collapsibe Button -->
@@ -121,7 +124,7 @@
 
 				<div class="tab-pane container-fluid px-0 active" id="violet_tab">
 
-					<video class="splash_video" data-loaded="true" preload="none" poster="res/vid/violet.jpg"playsinline autoplay muted loop>
+					<video class="splash_video" data-loaded="true" preload="none" poster="res/vid/violet.jpg" playsinline autoplay muted loop>
 						<source src="res/vid/violet.mp4" type="video/mp4">
 					</video>
 
@@ -143,7 +146,7 @@
 		<section class="container-fluid" id="contact">
 
 			<div class="col">
-			<h1 class="pb-5" align="center">Contact</h1>
+			<h1 class="pb-5">Contact</h1>
 			<div class="row">
 				<div class="col-sm-6">
 					<div class="float-sm-right">
@@ -174,7 +177,7 @@
 			</div>
 
 			<footer class="container-fluid" id="copyright">
-				© Akara Robotics Ltd. 2020
+				&copy; Akara Robotics Ltd. 2020
 			</footer>
 
         </section>
