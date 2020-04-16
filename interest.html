@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akara Robotics</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+  </head>
+
+  <body>
+    <main>
+      <header>
+          <a class="logo" href="index.html"><img src="images/akaraLogo.svg" alt="logo" height="60" width="123"></a>
+          <input type="checkbox" id="nav-toggle" class="nav-toggle">
+          <nav>
+            <ul>
+              <li><a class="nav-name" href="index.html">Home</a></li>
+              <li><a class="nav-name" href="violet.html">Violet</a></li>
+              <li><a class="nav-name" href="stevie.html">Stevie</a></li>
+              <li><a class="nav-name" href="about.html">About</a></li>
+              <li class="li-btn"><a class="btn" id="nav-btn" href="interest.html">Register Interest</a></li>
+            </ul>
+          </nav>
+          <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+          </label>
+      </header>
+
+      <section class="interest">
+        <div class="content-wrap" "item-details">
+          <section class="interest-container">
+            <div class="interest-text">
+              <h3>Get in touch with Akara today.</h3>
+              <p>Give us some brief information about yourself and we'll be in touch shortly.</p>
+            </div>
+            <div class="interest-form">
+
+              <!-- Script to redirect to Thank You page -->
+              <script type="text/javascript">var submitted=false;</script>
+              <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted)  {window.location='thankyou.html';}"></iframe>
+
+              <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd4nZ-_0htuK0DATWmyGNcplVTJ4kHyM91qWp5u3jLCxF0wkw/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+                <label for="robot">Which robot(s) are you interested in?</label><br>
+                <input type="checkbox" id="rviolet" name="entry.1453711571" value="Violet: the UV disinfectant robot">
+                <label for="rviolet">Violet: the UV disinfectant robot</label><br>
+                <input type="checkbox" id="rstevie" name="entry.1453711571" value="Stevie: the socially assistive robot">
+                <label for="rstevie">Stevie: the socially assistive robot</label><br>
+                <label for="cname">What is the name of your company?</label><br>
+                <input type="text" id="cname" name="entry.344592520"><br>
+                <label for="clink">Can you provide a link to the company website?</label><br>
+                <input type="text" id="clink" name="entry.1179842304"><br>
+                <label for="cindustry">What industry is your company in?</label><br>
+                <select id="cindustry" name="entry.281395130">
+                  <option value="Acute hospitals">Acute Hospitals</option>
+                  <option value="Nursing Homes (or other long-term care settings)">Nursing Homes (or long-term care settings)</option>
+                  <option value="Dentistry">Dentistry</option>
+                  <option value="Cleaning service suppliers">Cleaning service suppliers</option>
+                  <option value="Public transport">Public transport</option>
+                  <option value="Ambulance and emergency response">Ambulance and emergency response</option>
+                  <option value="Retail">Retail</option>
+                  <option value="Schools and Colleges">Schools and Colleges</option>
+                  <option value="Other">Other</option>
+                </select><br>
+                <label for="application">Can you briefly outline how Akara technology could be used in your application.</label><br>
+                <textarea id="application" name="entry.1743427647" rows="5"></textarea><br>
+                <label for="nunits">How many units do you think you'll need for your application?</label><br>
+                <input type="number" id="nunits" name="entry.1914103581"><br>
+                <label for="name">Who should we contact as a follow up?</label><br>
+                <input type="text" id="name" name="entry.1531422061"><br>
+                <label for="email">What is their email address?</label><br>
+                <input type="text" id="email" name="entry.915081578"><br>
+                <label for="newsletter">Would you like to be added to an email update list?</label><br>
+                <input type="radio" id="nyes" name="entry.797828046" value="Yes">
+                <label for="nyes">Yes</label><br>
+                <input type="radio" id="nno" name="entry.797828046" value="No">
+                <label for="nno">No</label><br>
+                <input type="submit" value="Send" class="btn">
+              </form>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="partners">
+        <h3>Our Partners</h3>
+        <div class="partners-container">
+          <div class="partners-block">
+            <a href="https://www.movidius.com/ "><img src="images/movidius.png" alt="Movidius, an Intel Company"></a>
+            <a href="https://luxonis.com/ "><img src="images/luxonis.png" alt="Luxonis"></a>
+            <a href="https://www.hse.ie/eng/about/who/communications/digital/digital-transformation/ "><img src="images/HSE.png" alt="HSE"></a>
+            <a href="https://www.thedigitalhub.com/"><img src="images/TDH.png" alt="The Digital Hub"></a>
+          </div>
+          <div class="partners-block">
+            <a href="https://www.armydistaff.org/"><img src="images/ADF.png" alt="Army Distaff Foundation"></a>
+            <a href="https://robus.com/ "><img src="images/robus.png" alt="Robus"></a>
+            <a href="https://www.tcd.ie "><img src="images/TCD.png" alt="Trinity College Dublin"></a>
+            <a href="https://www.plymouth.ac.uk/research/ehealth"><img src="images/plymouth.png" alt="University of Plymouth"></a>
+          </div>
+      </section>
+
+      <footer>
+        <div class="footer">
+          <div class="footer-wrapper">
+            <div class="footer-item">
+              <h4>Akara Ltd.</h4>
+              <p>Akara is a Trinity College spinout based in Dublin, Ireland. <em>We make robots that care.</em></p>
+              <p>Copyright &copy; Akara Ltd.</p>
+            </div>
+            <div class="footer-item">
+              <h4>Newsletter</h4>
+              <p>Stay updated with news about our robots.</p>
+              <div class="form">
+
+
+                <!-- Begin Mailchimp Signup Form -->
+
+                <div id="mc_embed_signup">
+                  <form action="https://akara.us19.list-manage.com/subscribe/post?u=124bee784d6bf877f63fd6b19&amp;id=75f7cac3e2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                    <div id="mc_embed_signup_scroll">
+
+                      <div class="mc-field-group">
+                        <input type="email" value="" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Enter Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email Address '" required="">
+                      </div>
+
+                      <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                      </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+
+                      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                        <input type="text" name="b_124bee784d6bf877f63fd6b19_75f7cac3e2" tabindex="-1" value="">
+                      </div>
+                      <div class="form-btn">
+                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                      </div>
+
+                    </div>
+									</form>
+                </div>
+
+                  <!--End mc_embed_signup-->
+
+								</div>
+            </div>
+
+            <div class="footer-item icons">
+              <h4>Contact us</h4>
+              <div class="footer-social">
+                <a href="mailto: info@akara.ai"><i class="fa fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/company/akara-robotics/"><i class="fa fa-linkedin"></i></a>
+                <a href="https://twitter.com/akara_robotics"><i class="fa fa-twitter"></i></a>
+              </div>
+              <p>info@akara.ai</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </main>
+  </body>
+</html>

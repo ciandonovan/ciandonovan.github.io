@@ -1,0 +1,1541 @@
+/* Colour Palette:
+
+#5f6ed9 -- Purple
+#f9f9ff -- Light Gray
+#1d1d1d -- Dark Gray
+#04091e -- Dark Blue
+rgba(95, 110, 217, 80%) -- Purple 80% Opacity
+
+*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700');
+
+:root {
+  --background: rgba(255, 255, 255, 90%);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ----------------- General ----------------- */
+
+.content-wrap {
+  max-width: 1400px;
+  width: 85%;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+body {
+	margin: 0;
+	background: #222;
+	font-family: "Poppins", sans-serif;
+	font-weight: 200;
+}
+
+/* ----------------- Navbar ----------------- */
+
+header {
+  background: var(--background);
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 70px;
+}
+
+.logo img {
+  margin-top: 5px;
+}
+
+.nav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.nav-toggle:focus ~ .nav-toggle-label {
+  outline: 3px solid rgba(lightblue, .75);
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: #5f6ed9;
+  height: 3px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: center;
+  top: 100%;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.li-btn {
+  margin-bottom: 2em;
+  margin-top: 1.5em;
+}
+
+nav a {
+  color: #1d1d1d;
+  text-decoration: none;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  color: #5f6dd9;
+  font-weight: 400;
+}
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+.btn {
+  color: #fff;
+  background: #5f6ed9;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  background: rgba(95, 110, 217, 80%);
+  color: #fff;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+
+  .logo {
+    grid-column: 2 / 3;
+  }
+
+  nav {
+    // all: unset; /* this causes issues with Edge, since it's unsupported */
+
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1);
+    background: none;
+    top: initial;
+    left: initial;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    margin-left: 2em;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .li-btn {
+    margin-bottom: 0;
+    margin-left: 2em;
+    margin-top: 0;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  .nav-name::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: #5f6ed9;
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+
+  .nav-name:hover::before {
+    transform: scale(1,1);
+  }
+
+  .btn {
+    color: #fff;
+    background: #5f6ed9;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 4px;
+    margin-left: 2em;
+    white-space: nowrap;
+  }
+
+  .btn:hover {
+    background: rgba(95, 110, 217, 80%);
+    color: #fff;
+  }
+
+}
+
+
+/* ----------------- Intro Section ----------------- */
+
+.intro {
+  height: 100vh;
+  background-image: url(../images/Stevie1.png);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
+  display: grid;
+}
+
+h1, h2 {
+  color: #fff;
+  height: 100px;
+  font-size: 4em;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Times";
+  margin: 0 0 0 50px;
+}
+
+h1 {
+  margin: 0 auto 0;
+}
+
+h2 {
+  margin: 15% auto 0;
+  width: 90%;
+}
+
+
+/* ----------------- Press Section ----------------- */
+
+.press {
+  background-color: #fff;
+  text-align: center;
+}
+
+.press-container {
+  padding: 0;
+}
+
+.press-container a {
+  display: inline-block;
+  margin: 30px;
+  vertical-align: middle;
+}
+
+.press-container a:hover {
+  transform: scale(1.05);
+}
+
+
+
+/* ----------------- Home - Robots Section ----------------- */
+
+.meet-robots {
+  background: #f9f9ff;
+}
+
+.meet-violet-stevie {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+
+.text-violet > p:last-of-type {
+  margin-bottom: 40px;
+}
+
+.text-violet > a:first-of-type {
+  margin-left: 0;
+}
+
+.text-violet > a:last-of-type {
+  margin-left: 10px;
+}
+
+h3 {
+  color: #5f6ed9;
+  margin: 0;
+  font-size: 2em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+h4 {
+  text-transform: uppercase;
+}
+
+.meet-robots h4 {
+  margin: 0 0 40px 0;
+}
+
+/* ----------------- Why Akara Section ----------------- */
+
+.why-akara {
+    background-color: #fff;
+    text-align: center;
+}
+
+.reason {
+    margin: 50px 40px 0 40px;
+    flex: 1 1 300px;
+}
+
+.why-akara-intro {
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.why-akara-intro h3 {
+  margin-top: 0;
+}
+
+.why-akara-content {
+  display: flex;
+  margin: 0 auto;
+}
+
+.reason h4 {
+  margin-top: 10px;
+}
+
+
+/* ----------------- Partners Section ----------------- */
+
+.partners {
+  background-color: #5f6ed9;
+  text-align: center;
+  display: grid;
+}
+
+.partners h3 {
+  color: #fff;
+  margin-top: 15px;
+  font-size: 2em;
+}
+
+.partners-container {
+  padding: 0;
+}
+
+.partners-container a {
+  display: inline-block;
+  margin: 30px 30px;
+  vertical-align: middle;
+  opacity: 0.5;
+}
+
+.partners-container a:hover {
+  opacity: 1;
+}
+
+@media screen and ( min-width: 1592px ) {
+
+  .partners-container {
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+@media screen and ( max-width: 915px ) {
+
+  .partners-container a {
+    margin: 10px;
+  }
+
+  .partners-container img {
+    transform: scale(0.9);
+  }
+
+}
+
+
+/* ----------------- Footer ----------------- */
+
+.footer {
+    background-color: #04091e;
+}
+
+.footer-wrapper {
+    max-width: 1200px;
+    text-align: left;
+    color: #fff;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    column-gap: 20px;
+    padding: 30px;
+}
+
+.footer-item {
+    margin: 50px 40px 0 40px;
+    flex: 1 1 300px;
+    padding: 20px;
+}
+
+.footer-item h4 {
+    margin-bottom: 0;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control {
+  width: 100%;
+}
+
+.form-btn input {
+  font-family: inherit;
+  font-size: 1em;
+  text-transform: uppercase;
+  margin: 10px 0 0 0;
+  color: #fff;
+  background: #5f6ed9;
+  text-decoration: none;
+  padding: 7px;
+  border-radius: 4px;
+  white-space: nowrap;
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
+}
+
+.form-btn input:hover {
+  background: rgba(95, 110, 217, 80%);
+  color: #fff;
+}
+
+.form-control {
+  border: none;
+  border-radius: 0px;
+  font-family: inherit;
+  font-size: 13px;
+  color: #ccc;
+  padding: 9px;
+}
+
+.icons {
+  text-align: right;
+}
+
+.icons a {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  text-align: left;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.icons a i {
+  vertical-align: bottom;
+  color: #fff;
+}
+
+.icons a:hover i {
+  color: #8490ff;
+}
+
+.icons p {
+  margin-top: 30px;
+}
+
+/* ----------------- Stevie Page - Intro Section ----------------- */
+
+.intro-stevie {
+  height: 100vh;
+  background-image: url(../images/stevie-intro.jpg);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  display: grid;
+}
+
+/* ----------------- Stevie Page - Did You Know Section ----------------- */
+
+.stevie-problem {
+  background-color: #fff;
+  text-align: center;
+}
+
+.problem {
+  margin: 50px 40px 0 40px;
+  flex: 1 1 300px;
+}
+
+.stevie-problem-intro {
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.stevie-problem-intro h3 {
+  margin-top: 0;
+}
+
+.stevie-problem-content {
+  display: flex;
+  margin: 0 auto;
+}
+
+.problem h4 {
+  margin-top: 10px;
+}
+
+/* ----------------- Stevie Page - Stevie is Here to Help Section ----------------- */
+
+.stevie-help-all {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+
+.stevie-help {
+  background: #f9f9ff;
+}
+
+.stevie-help-text > p:last-of-type {
+  margin-bottom: 60px;
+}
+
+.stevie-help-text a {
+  margin-left: 0;
+}
+
+.stevie-video {
+  width: 80%;
+}
+
+
+/* ----------------- Stevie Page - Purpose Section ----------------- */
+
+.stevie-purpose {
+  background: #fff;
+  text-align: center;
+}
+
+.purpose-title p {
+  width: 80%;
+  margin: 10px auto;
+}
+
+.purpose-row {
+  display: flex;
+  justify-content: center;
+}
+
+.purpose {
+  margin: 20px 40px;
+}
+
+.purpose p {
+  margin: 0;
+}
+
+
+/* ----------------- Stevie Page - Functionality Section ----------------- */
+
+.stevie-functionality {
+  background-color: #f9f9ff;
+  text-align: center;
+}
+
+.functionality {
+  margin: 50px 40px 0 40px;
+  flex: 1 1 300px;
+}
+
+.stevie-functionality-intro {
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.stevie-functionality-intro h3 {
+  margin-top: 0;
+}
+
+.stevie-functionality-content {
+  display: flex;
+  margin: 0 auto;
+}
+
+.functionality h4 {
+  margin-top: 10px auto 10px;
+}
+
+.fun70 {
+  margin-top: 40px;
+}
+
+.fun80 {
+  margin-top: 30px;
+}
+
+.fun90 {
+  margin-top: 20px;
+}
+
+/* ----------------- Stevie Page - Quotes Section ----------------- */
+
+.stevie-quotes {
+  background-color: #fff;
+  text-align: center;
+}
+
+.stevie-quotes-content {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+.quote {
+  width: 70%;
+  margin: 20px 40px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.quote-square {
+  background-color: rgba(95, 110, 217, 70%);
+  width: 500px;
+  height: 500px;
+  padding: 20px;
+  border-radius: 5%;
+  display: flex;
+  align-items: center;
+}
+
+.quote-text {
+  width: 80%;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+.quote-text p {
+  font-size: 1.3em;
+}
+
+.stevie-quotes-intro {
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.stevie-quotes-intro h3 {
+  margin-top: 0;
+}
+
+.quote h4 {
+  margin-bottom: 0;
+  margin-block-end: 0;
+}
+
+.quote p {
+  margin: 2px;
+}
+
+
+/* ----------------- Violet Page - Intro Section ----------------- */
+
+.intro-violet {
+  height: 100vh;
+  background-image: url(../images/violet-intro.jpg);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.violet-intro-text {
+  margin-left: 200px;
+}
+
+.img-violet {
+  margin-left: 20px;
+}
+
+.violet-clean {
+  height: 800px;
+  background-image: url(../images/clean.png);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom right;
+  text-align: center;
+}
+
+.chart {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.chart-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+.chart-text h1 {
+  color: #5f6ed9;
+  font-size: 5em;
+  margin: 0;
+}
+
+.chart-text p {
+  margin: 0;
+}
+
+.chart-text p:first-of-type {
+  font-size: 1.5em;
+}
+
+.introducing-violet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+}
+
+.violet-interest {
+  background: #fff;
+  display: flex;
+  justify-content: center;
+}
+
+.violet-interest-intro {
+  text-align: center;
+}
+
+.violet-interest-button {
+  display: flex;
+  justify-content: center;
+}
+
+.violet-interest-button a {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/* ----------------- About Page ----------------- */
+
+.intro-about {
+  height: 100vh;
+  background-image: url(../images/about-intro.jpg);
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  display: grid;
+}
+
+.about-us {
+  background: #f9f9ff;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr 1fr;
+    column-gap: 20px;
+}
+
+.about-container img {
+  width: 90%;
+}
+
+.about-us .content-wrap {
+  padding-bottom: 0;
+}
+
+.img-about {
+  position: relative;
+}
+
+.img-about img {
+  position: absolute;
+  bottom: 0;
+  height: 90%;
+  width: auto;
+}
+
+.team {
+  background: #fff;
+  text-align: center;
+}
+
+.team-title p {
+  width: 80%;
+  margin: 10px auto;
+}
+
+.team-members-row {
+  display: flex;
+  justify-content: center;
+}
+
+.team-member {
+  margin: 20px 40px;
+}
+
+.team-member h4 {
+  margin: 5px;
+}
+
+.team-member p {
+  margin: 0;
+}
+
+.team-member a {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  display: inline-block;
+  text-align: left;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.team-member a i {
+  vertical-align: bottom;
+  color: #5f6ed9;
+}
+
+.team-member a:hover i {
+  color: #4651a0;
+}
+
+@media screen and ( max-width: 1135px ) {
+
+  .about-container {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .img-about {
+    position: relative;
+    height: 250px;
+  }
+
+  .img-about img {
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    height: 90%;
+    width: auto;
+  }
+
+}
+
+
+/* ----------------- Register Interest ----------------- */
+
+.interest {
+  background: #f9f9ff;
+  padding-top: 80px;
+}
+
+.interest-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+}
+
+.interest-container p {
+  margin-top: 0;
+  width: 90%;
+}
+
+.interest-form input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0 20px 0;
+  box-sizing: border-box;
+}
+
+.interest-form select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0 20px 0;
+  box-sizing: border-box;
+}
+
+#rviolet {
+  width: 20px;
+  margin-top: 30px;
+}
+
+#rstevie {
+  width: 20px;
+  margin-bottom: 40px;
+}
+
+#cname {
+  width: 40%;
+}
+
+#clink {
+  width: 40%;
+}
+
+#cindustry {
+  width: 30%;
+}
+
+#nunits {
+  width: 15%;
+}
+
+#order {
+  width: 30%;
+}
+
+#name {
+  width: 40%;
+}
+
+#email {
+  width: 40%;
+}
+
+#application {
+  width: 100%;
+}
+
+#nyes, #nno {
+  width: 20px;
+}
+
+.interest-form .btn {
+    font-family: inherit;
+    font-size: 1em;
+    text-transform: uppercase;
+    margin: 10px 0 0 0;
+    color: #fff;
+    background: #5f6ed9;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    box-shadow: 0px 0px 0px transparent;
+    border: 0px solid transparent;
+    text-shadow: 0px 0px 0px transparent;
+    width: 30%;
+  }
+
+.interest-form .btn:hover {
+  background: rgba(95, 110, 217, 80%);
+  color: #fff;
+}
+
+
+/* ----------------- Thank You Page ----------------- */
+
+.thankyou {
+  background: #f9f9ff;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.thankyou-content {
+  height: 100%;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.thankyou-content p {
+  font-style: oblique;
+  color: #5f6ed9;
+  font-size: 5em;
+  margin: 0;
+}
+
+.thankyou-content h4 {
+  font-size: 1.5em;
+  margin-top: 30px;
+  font-weight: 500;
+}
+
+/* ----------------- Responsiveness ----------------- */
+
+@media screen and ( max-width: 1800px ) {
+
+  .purpose {
+    margin: 20px;
+  }
+
+  .purpose img {
+    height: 350px;
+  }
+
+  .quote {
+    margin: 20px 20px;
+  }
+
+  .quote-square {
+    width: 375px;
+    height: 375px;
+  }
+
+  .quote-square p {
+    font-size: 1em;
+  }
+
+}
+
+
+@media screen and ( max-width: 1500px ) {
+
+  h1, h2 {
+    font-size: 4em;
+  }
+
+  h1 {
+    margin: 10% auto;
+  }
+
+  h2 {
+    margin: 30% auto 0;
+  }
+
+}
+
+@media screen and ( max-width: 1429px ) {
+
+  .press-img50 {
+    height: 43px;
+  }
+
+  .press-img70 {
+    height: 60px;
+  }
+
+  .press-img150 {
+    height: 128px;
+  }
+
+  #flip-violet {
+      display: flex;
+      flex-direction: column-reverse;
+      text-align: center;
+  }
+
+  #flip-stevie {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+  }
+
+ .meet-violet-stevie h3 {
+   margin-top: 10px;
+ }
+
+ .meet-violet-stevie img {
+   margin-top: 40px;
+ }
+
+ .why-akara-content {
+   flex-direction: column;
+ }
+
+}
+
+.press-img50, .press-img70, .press-img150 {
+  width: auto;
+}
+
+
+@media screen and ( max-width: 1345px ) {
+
+.violet-intro-text {
+  margin-left: 50px;
+}
+
+
+@media screen and ( max-width: 1212px ) {
+
+  h1, h2 {
+    font-size: 3em;
+  }
+
+  h1 {
+    margin: 10% auto;
+  }
+
+  h2 {
+    margin: 30% auto 0;
+  }
+
+  .press-img50 {
+    height: 35px;
+  }
+
+  .press-img70 {
+    height: 49px;
+  }
+
+  .press-img150 {
+    height: 105px;
+  }
+
+  .purpose img {
+    height: 300px;
+  }
+
+  .quote {
+    margin: 20px 10px;
+  }
+
+  .quote-square {
+    width: 300px;
+    height: 300px;
+  }
+
+  .quote-square p {
+    font-size: 0.8em;
+  }
+
+  .img-violet-pic {
+    width: 500px;
+    height: auto;
+    margin-top: 30px;
+  }
+
+  #nunits {
+    width: 20%;
+  }
+
+}
+
+@media screen and ( min-width: 1085px ) {
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  }
+
+button {
+  padding: 15px;
+  margin-left: 10px;
+}
+
+.purpose img {
+  heiht: 275px;
+}
+
+}
+
+@media screen and ( max-width: 1053px ) {
+
+  h1, h2 {
+    font-size: 3em;
+  }
+
+  h1 {
+    margin: 10% auto;
+  }
+
+  h2 {
+    margin: 25% auto 0;
+  }
+
+ .press-container a {
+   margin: 15px;
+ }
+
+  .press-img50 {
+    height: 30px;
+  }
+
+  .press-img70 {
+    height: 42px;
+  }
+
+  .press-img150 {
+    height: 90px;
+  }
+
+  .interest-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .interest-text {
+    margin-bottom: 40px;
+  }
+
+  .interest-text p {
+    margin: 0;
+  }
+
+  .team-member {
+    margin: 10px 10px;
+  }
+
+  .team-member img {
+    width: 175px;
+    hight: auto;
+  }
+
+  .purpose img {
+    height: 250px;
+  }
+
+  .introducing-violet {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+  }
+
+  .img-violet {
+    margin: 0;
+  }
+
+}
+
+@media screen and ( max-width: 960px ) {
+
+  h1, h2 {
+    font-size: 3em;
+  }
+
+  h1 {
+    margin: 10% auto;
+  }
+
+  h2 {
+    margin: 30% auto 0;
+  }
+
+  .purpose img {
+    height: 225px;
+  }
+
+  .stevie-quotes-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .quote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .intro-violet {
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  .violet-intro-text {
+    width: 400px;
+    height: auto;
+    margin-left: 50px;
+    margin-bottom: 50px;
+  }
+
+}
+
+@media screen and ( max-width: 860px ) {
+
+  h1, h2 {
+    font-size: 2em;
+  }
+
+  h1 {
+    margin: 10% auto;
+  }
+
+  h2 {
+    margin: 30% auto 0;
+  }
+
+.meet-violet-stevie img {
+  width: 90%;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-item {
+    margin: 0;
+    padding: 20px;
+    flex: 1 1 100px;
+  }
+
+.icons {
+    text-align: left;
+  }
+
+.input-group {
+  display: flex;
+  flex-direction: row;
+  }
+
+button {
+  padding: 15px;
+  margin-left: 10px;
+  }
+
+}
+
+@media screen and ( max-width: 800px ) {
+
+  h1, h2 {
+    font-size: 2em;
+  }
+
+  h1 {
+    margin: 10% auto;
+  }
+
+  h2 {
+    margin: 40% auto 0;
+  }
+
+  .press-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .partners-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .partners-block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .partners-container a {
+    margin: 20px;
+    transform: scale(1);
+  }
+
+  .team-members-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .team-member {
+    margin: 20px 40px;
+  }
+
+  .team-member img {
+    width: 200px;
+    height: auto;
+  }
+
+  .stevie-problem-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
+  .stevie-help-all {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .stevie-video {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .purpose-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .purpose img {
+    width: 100%;
+    height: auto;
+  }
+
+  .stevie-functionality-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .functionality h4 {
+    margin-top: 10px auto 10px;
+  }
+
+  .fun70, .fun80, .fun90 {
+    margin-top: 10px;
+  }
+
+  .eye-icon {
+    margin-top: 40px;
+  }
+
+}
+
+@media screen and ( max-width: 620px ) {
+
+.intro-violet {
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.violet-intro-text {
+  width: 350px;
+  height: auto;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.img-violet-pic {
+  width: 400px;
+  height: auto;
+  margin-top: 0;
+}
+
+}
+
+@media screen and ( max-width: 480px ) {
+
+  h1, h2 {
+    font-size: 2em;
+  }
+
+  h1 {
+    margin: 20% auto;
+  }
+
+  h2 {
+    margin: 50% auto 10%;
+  }
+
+  .img-violet-pic {
+    width: 300px;
+    height: auto;
+  }
+
+}
+
+
+@media screen and ( max-width: 380px ) {
+
+  h1, h2 {
+    font-size: 2em;
+  }
+
+  h1 {
+    margin: 10% auto;
+  }
+
+  h2 {
+    margin: 50% auto 10%;
+  }
+
+}
+
+@media screen and ( max-width: 340px ) {
+
+  .text-violet > a {
+      margin: 10px auto;
+      padding: 10px;
+  }
+
+}
