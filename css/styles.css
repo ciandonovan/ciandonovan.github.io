@@ -739,18 +739,17 @@ h4 {
 }
 
 .violet-title-text {
-  /*
   background: red;
-  */
-  max-height: 50vh;
+  max-height: 60vh;
   padding-top: 15vh;
   flex-grow: 1;
   float: center;
+  padding: 10vh;
 }
 
 .violet-title-text h2 {
   width: 100%;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .violet-title-text h1 {
@@ -764,23 +763,21 @@ h4 {
 .violet-title-text h5 {
   width: 100%;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #F8DF16;
   text-shadow: 0px 0px 2px #444;
 }
 
 .violet-title-img {
-  /*
   background: orange;
-  */
-  padding-top: 15vh;
-  max-height: 50vh;
+  padding-top: 5vh;
+  max-height: 40vh;
   flex-grow: 1;
 }
 
 .violet-title-img img {
-  max-height: 50vh;
+  max-height: 40vh;
   float: right;
 }
 
