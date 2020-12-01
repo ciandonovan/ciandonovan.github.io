@@ -725,22 +725,63 @@ h4 {
 
 /* ----------------- Violet Page - Intro Section ----------------- */
 
-.intro-violet {
+.violet-cover {
   height: 100vh;
-  background-image: url(../images/violet-intro.jpg);
-  background-blend-mode: multiply;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  width: 100%;
+  margin: 0 auto;
+  background: rgb(175,238,223);
+  background: linear-gradient(0deg, rgba(175,238,223,1) 0%, rgba(114,233,237,1) 100%);
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.violet-intro-text {
-  width: 750px;
-  height: auto;
-  margin-left: 200px;
+.violet-title-text {
+  /*
+  background: red;
+  */
+  max-height: 50vh;
+  padding-top: 15vh;
+  flex-grow: 1;
+  float: center;
+}
+
+.violet-title-text h2 {
+  width: 100%;
+  font-size: 3rem;
+}
+
+.violet-title-text h1 {
+  width: 100%;
+  margin: 50px auto !important;
+  font-family: "";
+  font-size: 4rem;
+  color: #BE54F4;
+}
+
+.violet-title-text h5 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #F8DF16;
+  text-shadow: 0px 0px 2px #444;
+}
+
+.violet-title-img {
+  /*
+  background: orange;
+  */
+  padding-top: 15vh;
+  max-height: 50vh;
+  flex-grow: 1;
+}
+
+.violet-title-img img {
+  max-height: 50vh;
+  float: right;
 }
 
 .img-violet {
