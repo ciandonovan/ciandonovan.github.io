@@ -739,7 +739,6 @@ h4 {
 }
 
 .violet-title-text {
-  background: red;
   max-height: 60vh;
   padding-top: 15vh;
   flex-grow: 1;
@@ -770,7 +769,6 @@ h4 {
 }
 
 .violet-title-img {
-  background: orange;
   padding-top: 5vh;
   max-height: 40vh;
   flex-grow: 1;
