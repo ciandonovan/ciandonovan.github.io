@@ -739,43 +739,39 @@ h4 {
 }
 
 .violet-title-text {
-  max-height: 60vh;
-  padding-top: 15vh;
+  display: flex;
+  flex-direction: column;
   flex-grow: 1;
   float: center;
-  padding: 10vh;
+  text-align: center;
+  padding-top: 10vh;
 }
 
 .violet-title-text h2 {
   width: 100%;
-  font-size: 2rem;
+  font-size: 2.4rem;
 }
 
 .violet-title-text h1 {
   width: 100%;
-  margin: 50px auto !important;
-  font-family: "";
+  font-family: 'Sonsie One', cursive;
   font-size: 4rem;
   color: #BE54F4;
 }
 
 .violet-title-text h5 {
   width: 100%;
-  text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 600;
-  color: #F8DF16;
-  text-shadow: 0px 0px 2px #444;
+  color: #A8A8A8;
 }
 
 .violet-title-img {
-  padding-top: 5vh;
-  max-height: 40vh;
   flex-grow: 1;
 }
 
 .violet-title-img img {
-  max-height: 40vh;
+  max-height: 50vh;
   float: right;
 }
 
