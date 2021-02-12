@@ -1,224 +1,272 @@
 <!DOCTYPE html>
-<html lang="en" itemscope itemtype="http://schema.org/WebSite">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no"/>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 
-    <base href="https://www.akara.ai/"/>
-    <link rel="canonical" href="https://www.akara.ai/"/>
+		<link rel="canonical" href="https://www.akara.ai/"/>
+		<link rel="shortcut icon" type="image/png" href="res/img/favicon.png"/>
 
-    <!-- Search Result Title -->
-    <title>Akara Robotics</title>
-    <meta itemprop="name" property="og:title" name="twitter:title" content="Akara Robotics"/>
+		<!-- Search Result Title -->
+		<title>Akara Robotics</title>
 
-    <!-- Page Description -->
-    <meta name="description" content="Akara develops technology that empowers people, especially those working in the healthcare sector. We develop tools that enable workers to do more with less"/>
-    <meta itemprop="description" property="og:description" name="twitter:description" content="Akara develops technology that empowers people, especially those working in the healthcare sector. We develop tools that enable workers to do more with less"/>
+		<!-- Page Description -->
+		<meta name="description" content=""/>
 
-    <!-- Open Graph -->
-    <meta property="og:type" content= "website"/>
-    <meta property="og:site_name" content="Akara Robotics"/>
-    <meta property="og:url" itemprop="url" content="https://www.akara.ai/"/>
-    <meta property="og:image" itemprop="image primaryImageOfPage" content="images/social_card.png"/>
+		<!-- Page Creator -->
+		<meta name="author" content="Cian Donovan, cian.donovan@akara.ai"/>
 
-    <!-- Twitter Card -->
-    <meta name="twitter:site" content="@akara_robotics"/>
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:domain" content="akara.ai"/>
+		<!-- Twitter Card -->
+		<meta name="twitter:site" content="@akara_robotics"/>
+		<meta name="twitter:creator" content="@cian_donovan"/>
+		<meta name="twitter:card" content="summary"/>
+		<meta name="twitter:domain" content="akara.ai"/>
 
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="shortcut icon" href="images/favicon.ico">
-	
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160704918-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+		<!--Fonts-->
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
 
-      gtag('js', new Date());
+		<!--Stylesheets-->
+		<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+		<link rel="stylesheet" type="text/css" href="css/styles.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
 
-      gtag('config', 'UA-160704918-1',
-      {
-        cookie_expires: 0
-      });
-    </script>
-  </head>
+		<!--Scripts-->
+		<script type="text/javascript" src="https://livejs.com/live.js"></script>
+	</head>
 
-  <body>
-    <main>
-      <header>
-          <a class="logo" href="index.html"><img src="images/akaraLogo.svg" alt="logo" height="60" width="123"></a>
-          <input type="checkbox" id="nav-toggle" class="nav-toggle">
-          <nav>
-            <ul>
-              <li><a class="nav-name" href="index.html" style="color: #5f6ed9">Home</a></li>
-              <li><a class="nav-name" href="violet.html">Violet</a></li>
-              <li><a class="nav-name" href="stevie.html">Stevie</a></li>
-              <li><a class="nav-name" href="about.html">About</a></li>
-              <li class="li-btn"><a class="btn" id="nav-btn" href="interest.html">Register Interest</a></li>
-            </ul>
-          </nav>
-          <label for="nav-toggle" class="nav-toggle-label">
-            <span></span>
-          </label>
-      </header>
+	<body>
+		<header>
+			<img src="res/img/akara-full-transparent-text-logo.png" alt="Akara Logo">
+			<h1>
+				Cleaning
+				<br>
+				Reimagined
+			</h1>
+			<a href="#intro">
+				&#5167
+			</a>
+			<video class="background-media" preload="auto" playsinline autoplay muted loop>
+				<source src="res/vid/violet_ward_loop.mp4" type="video/mp4">
+			</video>
+		</header>
 
+		<nav>
+			<a class="nav-img" href="index.html" aria-current="page">
+				<img src="res/img/akara-full-transparent-text-logo.png" alt="Akara Navigation Logo">
+			</a>
+			<a class="nav-text" href="#contact">
+				Contact
+			</a>
+		</nav>
 
-      <section class="intro">
-        <h2><q>The robot that could change the senior care industry.</q></h2>
-        <h1>— Time Magazine</h2>
-      </section>
+		<main>
+			<section id="intro" class="centered-block">
+				<h2>Akara is a Facilities Management Robotics Company</h2>
+				<p>
+					We provide unprecedented speed, reliability and germ-killing effectiveness by putting AI-powered robots in the hands of skilled frontline staff.
+				</p>
+				<p>
+					Through our unique approach, we have created a game-changing new way to rapidly decontaminate spaces, reducing room downtime while attaining higher infection control standards than ever before.
+				</p>
+			</section>
 
-      <section class="press">
-        <div class="press-container">
-          <a href="https://www.innovatorsunder35.com/the-list/conor-mcginn/"><img class= "press-img70" src="images/MIT.png" alt="Banner for MIT Innovators Under 35 Europe"></a>
-          <a href="https://mashable.com/video/stevie-robot-elderly-care/?europe=true"><img class= "press-img50" src="images/Mashable.png" alt="Mashable logo"></a>
-          <a href="https://time.com/collection/best-inventions-2019/5733104/stevie/"><img class= "press-img150" src="images/Time.png" height: "500" alt="Banner for Time Best Inventions 2019"></a>
-          <a href="https://www.telegraph.co.uk/news/2019/11/26/worlds-advanced-social-robot-hosts-bingo-lessons-british-care/"><img class= "press-img50" src="images/Telegraph.jpg" alt="The Telegraph logo"></a>
-          <a href="https://www.bbc.com/news/av/uk-england-cornwall-50646646/stevie-the-robot-care-worker-finds-new-job-in-camborne"><img class= "press-img50" src="images/BBC.png" alt="BBC logo"></a>
-        </div>
-      </section>
+			<section id="problems" class="split-block-grid">
+				<div class="half-block triangle">
+					<h2>The Challenges facing your Hospital</h2>
+					<p>
+						We founded Akara to empower frontline workers – giving them the tools they need to make hospitals safer and improve outcomes for patients and staff alike.
+					</p>
+					<video class="background-media" preload="auto" playsinline autoplay muted loop>
+						<source src="res/vid/Ultrasound_room_small.mp4" type="video/mp4">
+					</video>
+				</div>
+				<div class="half-block">
+					<div class="list-block">
+						<h3>Staffing Shortages</h3>
+						<p>
+							91% of cleaners report they are too rushed to be thorough.
+						</p>
+					</div>
+					<div class="list-block">
+						<h3>Frontline Services Capacity Loss</h3>
+						<p>
+							Faster cleaning could lead to increased billable revenues of >$20k per day in settings like Radiology.
+						</p>
+					</div>
+					<div class="list-block">
+						<h3>Growth in Hospital Acquired Infections</h3>
+						<p>
+							Up to 10% of patients contract an infection while in hospital, leading to >16 million additional hospital days per year.
+						</p>
+					</div>
+				</div>
+			</section>
 
-      <section class="meet-robots">
-        <div class="content-wrap" "item-details">
-          <section id="flip-violet" class="meet-violet-stevie">
-            <div class="img-violet">
-              <img src="images/home-violet.png" alt="Violet, the robot">
-            </div>
-            <div class="text-violet">
-              <h3 >Meet Violet</h3>
-              <h4 >The germ-killing robot.</h4>
-              <p>Manual disinfectant methods are resource intensive, risk the safety of health workers, are prone to human error and don’t disinfect the air.</p>
-              <p>Violet is a robot that has been designed to rapidly disinfect rooms where it is not practical to use traditional approaches. The technology has been validated by a leading independent 3rd party microbiology lab in applications in both hospitals and on public transport.</p>
-              <p>We have completed the design of the market-ready version of the robot and are currently accepting pre-orders for the first deliveries of the Violet robot. </p>
-              <a class="btn" href="violet.html">Learn More</a>
-              <a class="btn" href="interest.html">Register Interest</a>
-            </div>
-          </section>
-        </div>
+			<section id="solutions" class="split-block-grid">
+				<div class="half-block">
+					<div class="slider">
+						<div class="slide">
+							<h2>Speed</h2>
+							<p>
+								Reduce cleaning times from 45 to 5 minutes.
+							</p>
+							<img src="res/img/speed.jpg" alt="Violet Speed">
+						</div>
+						<div class="slide">
+							<h2>Versatility</h2>
+							<p>
+								Can be deployed in any type of room.
+							</p>
+							<img src="res/img/versatility.jpg" alt="Violet Versatility">
+						</div>
+						<div class="slide">
+							<h2>Safety</h2>
+							<p>
+								The only UV disinfection robot designed for use around people.
+							</p>
+							<img src="res/img/safety.jpg" alt="Violet Safety">
+						</div>
+						<div class="slide">
+							<h2>Speed</h2>
+							<p>
+								Reduce cleaning times from 45 to 5 minutes.
+							</p>
+							<img src="res/img/speed.jpg" alt="Violet Speed">
+						</div>
+					</div>
+				</div>
+				<div class="half-block">
+					<div class="list-block">
+						<h3>Better Performance<br>Less Downtime</h3>
+						<p>
+							Our scientific and data-driven approach delivers industry-leading performance in a fraction of the time it normally takes to disinfect the room.
+						</p>
+					</div>
+				</div>
+			</section>
 
-        <div class="content-wrap" "item-details">
-          <section id="flip-stevie" class="meet-violet-stevie">
-            <div class="text-violet">
-              <h3>Meet Stevie</h3>
-              <h4>The social robot.</h4>
-              <p>The senior living industry (in the US alone) will need to fill roles for 1.4 million workers between now and 2025. This staffing shortfall is having a detrimental effect on both the quality of support, as well as the quality of life that older people in long-term care receive. </p>
-              <p>Stevie is a social robot designed to help keep seniors socially connected, and to support caregivers in the delivery of group-based wellness activities. Stevie has been validated through extensive testing in retirement communities in the US and UK. </p>
-              <p>We are currently seeking partners for our first permanent deployments.</p>
-              <a class="btn" href="stevie.html">Learn More</a>
-              <a class="btn" href="interest.html">Register Interest</a>
-            </div>
-            <div class="img-violet">
-              <img src="images/home-stevie.jpg" alt="Stevie, the robot">
-            </div>
-          </section>
-        </div>
-      </section>
+			<section id="testimonial">
+				<div class="centered-block">
+					<h2>Testimonials</h2>
+					<figure>
+						<blockquote>
+							<i>
+								"Akara’s approach represents a real step change in how hospitals and care settings can use technology to improve on current practices. Akara have existing pedigree is developing innovative, digital health solutions which are human-centric, and seeing Violet in action on our wards has benefitted our operational approach. In particular, Violet’s interaction with existing staff was excellent to see."
+							</i>
+						</blockquote>
+						<figcaption>—Noreen Hynes, <cite>General Manager at Midlands Regional Hospital Tullamore</cite></figcaption>
+					</figure>
+				</div>
+				<div class="centered-block">
+					<img src="res/img/testimonial.jpg" loading="lazy" alt="Conor McGinn">
+				</div>
+			</section>
 
-      <section class="why-akara">
-        <div class="content-wrap">
-          <div class="why-akara-intro">
-            <h3>Why Akara?</h3>
-            <p>Akara is a spin-out company from Trinity College Dublin and builds on over a decade of pioneering scientific research in robotics and artificial intelligence. Akara’s mission is to develop technology that empowers people in the healthcare industry.</p>
-          </div>
-          <div class="why-akara-content">
-            <div class="reason">
-              <img src="images/why-icon1.png" alt="">
-              <h4>User-Centred</h4>
-              <p>Akara focuses on real user needs. We believe in working with users to better understand the problem, and then define and implement the solution. We use tried and tested methods, developed over 60 years at Stanford University and through the SUGAR Design network.</p>
-            </div>
-            <div class="reason">
-              <img src="images/why-icon2.png" alt="">
-              <h4>Evidence Based</h4>
-              <p>Akara is built on a deep foundation of scientific knowledge, developed over a period of 10+ years at Irelands leading university. Our products have been validated in the field, and the underlying research is captured in more that 30 peer reviewed papers.</p>
-            </div>
-            <div class="reason">
-              <img src="images/why-icon3.png" alt="">
-              <h4>Ethically Developed</h4>
-              <p>Akara cares deeply about the ethical implications of robotics and AI technology. The company aspires to be a standard setter for responsible robotic innovation. We are working with the Federation of Responsible Robotics to attain quality mark for ethically developed robots.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+			<section id="contact" class="centered-block">
+				<!--
+				<h2>Get in Touch</h2>
+				<form action="mailto:info@akara.ai" method="get" enctype="text/plain">
+					<div>
+						<label for="name">Name:
+							<input type="text" name="name" id="name"/>
+						</label>
+					</div>
+					<div>
+						<label for="email">Email:
+							<input type="text" name="email" id="email"/>
+						</label>
+					</div>
+					<div>
+						<label>Comments:</label>
+						<br/>
+						<textarea name="comments" rows="12" cols="35">What would you like to know?</textarea>
+					</div>
+					<div>
+						<input type="submit" name="submit" value="Send"/>
+						<input type="reset" name="reset" value="Clear Form"/>
+					</div>
+				</form>
+				-->
+			</section>
 
-      <section class="partners">
-        <h3>Developed In Partnership With</h3>
-        <div class="partners-container">
-          <div class="partners-block">
-            <a href="https://www.movidius.com/ "><img src="images/movidius.png" alt="Movidius, an Intel Company"></a>
-            <a href="https://luxonis.com/ "><img src="images/luxonis.png" alt="Luxonis"></a>
-            <a href="https://www.hse.ie/eng/about/who/communications/digital/digital-transformation/"><img src="images/HSE.png" alt="HSE"></a>
-            <a href="https://www.thedigitalhub.com/"><img src="images/TDH.png" alt="The Digital Hub"></a>
-            <a href="https://www.localenterprise.ie/"><img src="images/LEO-Logo.png" alt="Local Enterprise Office"></a>
-          </div>
-          <div class="partners-block">
-            <a href="https://www.armydistaff.org/"><img src="images/ADF.png" alt="Army Distaff Foundation"></a>
-            <a href="https://robus.com/ "><img src="images/robus.png" alt="Robus"></a>
-            <a href="https://www.tcd.ie "><img src="images/TCD.png" alt="Trinity College Dublin"></a>
-            <a href="https://www.plymouth.ac.uk/research/ehealth"><img src="images/plymouth.png" alt="University of Plymouth"></a>
-          </div>
-      </section>
+			<section id="partners">
+				<h2>World Class Development Partners</h2>
+				<div class="partners-block">
+					<a href="https://www.tcd.ie">
+						<img src="res/img/TCD.png" alt="Trinity College Dublin">
+					</a>
+					<a href="https://www.intel.com">
+						<img src="res/img/intel.png" alt="Intel">
+					</a>
+					<a href="https://www.plymouth.ac.uk/research/ehealth">
+						<img src="res/img/plymouth.png" alt="University of Plymouth">
+					</a>
+					<a href="https://www.thedigitalhub.com/">
+						<img src="res/img/TDH.png" alt="The Digital Hub">
+					</a>
+				</div>
+			</section>
+		</main>
 
-      <footer>
-        <div class="footer">
-          <div class="footer-wrapper">
-            <div class="footer-item">
-              <h4>Akara Robotics Ltd.</h4>
-              <p>Akara is a Trinity College spinout based in Dublin, Ireland. <em>We make robots that care.</em></p>
-              <p>Copyright &copy; Akara Robotics Ltd.</p>
-            </div>
-            <div class="footer-item">
-              <h4>Newsletter</h4>
-              <p>Stay updated with news about our robots.</p>
-              <div class="form">
+		<footer>
+			<div class="footer-item">
+				<h4>Akara Robotics Ltd.</h4>
+				<p>
+					Akara is a Trinity College spinout based in Dublin, Ireland.
+					<br>
+					<em> We make robots that care</em>
+				</p>
+				<p>Copyright © Akara Robotics Ltd.</p>
+			</div>
 
+			<div class="footer-item">
+				<h4>Contact Us</h4>
+				<p>info@akara.ai</p>
+				<div class="footer-social">
+					<a href="mailto: info@akara.ai">
+						<i>&#9993</i>
+					</a>
+					<a href="https://www.linkedin.com/company/akara-robotics/">
+						<i>&#128279</i>
+					</a>
+					<a href="https://twitter.com/akara_robotics">
+						<i>&#128038</i>
+					</a>
+				</div>
+			</div>
 
-                <!-- Begin Mailchimp Signup Form -->
-
-                <div id="mc_embed_signup">
-                  <form action="https://akara.us19.list-manage.com/subscribe/post?u=124bee784d6bf877f63fd6b19&amp;id=75f7cac3e2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                    <div id="mc_embed_signup_scroll">
-
-                      <div class="mc-field-group">
-                        <input type="email" value="" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Enter Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email Address '" required="">
-                      </div>
-
-                      <div id="mce-responses" class="clear">
-                        <div class="response" id="mce-error-response" style="display:none"></div>
-                        <div class="response" id="mce-success-response" style="display:none"></div>
-                      </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-
-                      <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                        <input type="text" name="b_124bee784d6bf877f63fd6b19_75f7cac3e2" tabindex="-1" value="">
-                      </div>
-                      <div class="form-btn">
-                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
-                      </div>
-
-                    </div>
-									</form>
-                </div>
-
-                  <!--End mc_embed_signup-->
-
+			<div class="footer-item">
+				<h4>Newsletter</h4>
+				<p>
+					Stay updated with news about our robots.
+				</p>
+				<div class="form">
+					<!-- Begin Mailchimp Signup Form -->
+					<div id="mc_embed_signup">
+						<form action="https://akara.us19.list-manage.com/subscribe/post?u=124bee784d6bf877f63fd6b19&amp;id=75f7cac3e2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+							<div id="mc_embed_signup_scroll">
+								<div class="mc-field-group">
+									<input type="email" value="" name="EMAIL" class="form-control" id="mce-EMAIL" placeholder="Enter Email Address " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Email Address '" required="">
 								</div>
-            </div>
-
-            <div class="footer-item icons">
-              <h4>Contact us</h4>
-              <div class="footer-social">
-                <a href="mailto: info@akara.ai"><i class="fa fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/company/akara-robotics/"><i class="fa fa-linkedin"></i></a>
-                <a href="https://twitter.com/akara_robotics"><i class="fa fa-twitter"></i></a>
-              </div>
-              <p>info@akara.ai</p>
-            </div>
-          </div>
-        </div>
-      </footer>
-
-    </main>
-  </body>
+								<div id="mce-responses" class="clear">
+									<div class="response" id="mce-error-response" style="display:none"></div>
+									<div class="response" id="mce-success-response" style="display:none"></div>
+								</div>
+								<div style="position: absolute; left: -5000px;" aria-hidden="true">
+									<input type="text" name="b_124bee784d6bf877f63fd6b19_75f7cac3e2" tabindex="-1" value="">
+								</div>
+								<div class="form-btn">
+									<input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+								</div>
+							</div>
+						</form>
+					</div>
+					<!--End mc_embed_signup-->
+				</div>
+			</div>
+		</footer>
+	</body>
 </html>
