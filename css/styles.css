@@ -1,3 +1,11 @@
+:root
+{
+	--max-text-width: 600px;
+	--split-min-width: 400px;
+	--section-problems-height: 500px;
+	--section-solutions-height: 90vh;
+}
+
 *
 {
 	box-sizing: border-box;
@@ -13,8 +21,13 @@ body
 {
 	font-family: 'Roboto', sans-serif;
 	color: #333;
-	font-size: 1rem;
+	font-size: 1.2rem;
 	line-height: 1.4rem;
+}
+
+article
+{
+	padding: 10px;
 }
 
 h1,
@@ -25,19 +38,20 @@ h5,
 h6
 {
 	font-family: 'Fjalla One', sans-serif;
-	/*
-	font-size: 1.4rem;
-	line-height: 1.96rem;
-	letter-spacing: 0.1rem;
-	*/
-	font-weight: 400;
+	font-weight: 800;
 	text-transform: uppercase;
 }
 
-p
+h2
 {
-	width: 80%;
-	max-width: 300px;
+	font-size: 3rem;
+	line-height: 4.2rem;
+}
+
+p,
+blockquote
+{
+	max-width: var(--max-text-width);
 }
 
 img
@@ -60,7 +74,7 @@ main > section:nth-child(odd)
 
 nav
 {
-    position: sticky;
+	position: sticky;
 	top: 0;
 	z-index: 100;
 	display: flex;
@@ -97,7 +111,7 @@ nav
 header
 {
 	width: 100vw;
-    height: 100vh;
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -146,7 +160,6 @@ header > a
 	text-align: center;
 	text-transform: uppercase;
 	animation: fade-slide-up 1s 1s ease-out forwards, pulse 2s 3s ease-out infinite;
-	opacity: 0;
 }
 
 .background-media
@@ -160,31 +173,22 @@ header > a
 	filter: brightness(60%);
 	width: 100%;
 	height: 100%;
-	background-size: cover;
-	background-position: 50% 50%;
 	object-fit: cover;
+	object-position: 50% 50%;
 }
 
-.centered-block
+#intro
+{
+	padding: 150px 0;
+}
+
+#intro > article
 {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	padding: 40px 10px
-}
-
-.centered-block > p
-{
-	width: 90%;
-	max-width: 600px;
-}
-
-#intro
-{
-	padding-top: 150px;
-	padding-bottom: 150px;
 }
 
 #partners
@@ -213,67 +217,81 @@ header > a
 	align-items: center;
 }
 
-.split-block-grid
+.weighted-split
 {
-	display: grid;
-	grid-auto-columns: 1fr;
-	grid-template-rows: auto;
-	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-	grid-column-gap: 0px;
-	grid-row-gap: 0px;
+	display: flex;
+	flex-flow: row wrap;
 }
 
-.split-block-grid > .half-block:nth-child(1)
-{
-	color: white;
-}
-
-#problems > .triangle
-{
-	height: 500px;
-}
-
-.half-block
+.split
 {
 	position: relative;
 	z-index: 1;
 	overflow: hidden;
+	min-width: var(--split-min-width);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+
+.split-text
+{
+	flex-grow: 1;
 	align-items: start;
-	padding: 15px;
+}
+
+.split-text-list > article
+{
+	border-bottom: 1px solid #979797;
+}
+
+.split-image
+{
+	flex-grow: 3;
+	align-items: center;
+	color: white;
 }
 
 .triangle::after
 {
 	content: '';
 	position: absolute;
-	left: auto;
 	top: 0;
-	right: 0;
 	bottom: 0;
-	border-width: 500px 100px 0 0;
+	border-style: solid;
+	border-color: transparent;
+}
+
+.triangle-left::after
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
 	border-style: solid;
 	border-color: transparent;
 	border-right-color: white;
+	left: auto;
+	right: 0;
+	border-width: var(--section-problems-height)
+								calc(var(--section-problems-height) / 5)
+								0 0;
 }
 
-.list-block
+.triangle-right::after
 {
-	border-bottom: 1px solid #979797;
-	width: 80%;
-}
-
-#solutions
-{
-	padding: 100px 10px;
-
-}
-
-#solutions > .half-block
-{
-	height: 400px;
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	border-style: solid;
+	border-color: transparent;
+	border-left-color: whitesmoke;
+	left: 0;
+	right: auto;
+	border-width: 0 0
+								var(--section-solutions-height)
+								calc(var(--section-solutions-height) / 5);
 }
 
 @keyframes slider {
@@ -319,13 +337,7 @@ header > a
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: start;
-}
-
-.slider > .slide > p,
-.slider > .slide > h2
-{
-	padding-left: 20px;
+	align-items: center;
 }
 
 .slider > .slide > img
@@ -337,19 +349,45 @@ header > a
 	height: 100%;
 	width: 20%;
 	filter: brightness(60%);
-	background-size: cover;
-	background-position: 50% 50%;
 	object-fit: cover;
+	object-position: 50% 50%;
+}
+
+#problems > .split-image
+{
+	height: var(--section-problems-height);
+}
+
+#solutions
+{
+	padding: 200px 0;
+}
+
+#solutions > .split-text
+{
+	align-items: center;
+}
+
+#solutions > .split-image
+{
+	height: var(--section-solutions-height);
 }
 
 #testimonial
 {
+	padding: 150px 0;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 }
 
+#testimonial > *
+{
+	max-width: var(--max-text-width);
+}
+/*
 #testimonial figure
 {
 	max-width: 500px;
@@ -361,6 +399,7 @@ header > a
 	border-radius: 5px;
 	max-width: 300px;
 }
+*/
 
 footer
 {
