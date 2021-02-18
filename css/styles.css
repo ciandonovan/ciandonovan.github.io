@@ -38,7 +38,7 @@ h5,
 h6
 {
 	font-family: 'Fjalla One', sans-serif;
-	font-weight: 800;
+	font-weight: 400;
 	text-transform: uppercase;
 }
 
@@ -52,6 +52,11 @@ p,
 blockquote
 {
 	max-width: var(--max-text-width);
+}
+
+figure
+{
+	margin: 0;
 }
 
 img
@@ -194,7 +199,7 @@ header > a
 #partners
 {
 	background-color: #444;
-	padding: 20px 100px;
+	padding: 20px 10px;
 }
 
 #partners > h2
@@ -278,6 +283,11 @@ header > a
 								0 0;
 }
 
+.triangle-left > article
+{
+	padding-right: calc(var(--section-problems-height) / 5);
+}
+
 .triangle-right::after
 {
 	content: '';
@@ -338,6 +348,11 @@ header > a
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+.slider > .slide > article
+{
+	padding-left: calc(var(--section-solutions-height) / 5);
 }
 
 .slider > .slide > img
